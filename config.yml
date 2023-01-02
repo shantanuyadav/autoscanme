@@ -1,0 +1,41 @@
+minimum-age: 2m                                                                                                                                                                                                    
+# set multiple anchor files
+anchors:                                                                                                                                                                                                           
+  - /mnt/unionfs/mounted.bin                                                                                                                                                                                       
+  - /mnt/unionfs/mounted-nethub-m.bin                                                                                                                                                                              
+  - /mnt/unionfs/mounted-nethub-tv.bin                                                                                                                                                                             
+# <- triggeres ->
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                                   
+# port for Autoscan webhooks to listen on
+port: 3030                                                                                                                                                                                                         
+                                                                                                                                                                                                                   
+triggers:                                                                                                                                                                                                          
+  a-train:                                                                                                                                                                                                         
+      rewrite:                                                                                                                                                                                                     
+        - from: ^/Media/Movies/                                                                                                                                                                                    
+          to: /mnt/unionfs/Media/Movies/                                                                                                                                                                           
+        - from: ^/Media/TV/                                                                                                                                                                                        
+          to: /mnt/unionfs/Media/TV/                                                                                                                                                                               
+        - from: ^/Media/Music/                                                                                                                                                                                     
+          to: /mnt/unionfs/Media/Music/                                                                                                                                                                            
+targets:                                                                                                                                                                                                           
+  plex:                                                                                                                                                                                                            
+#sanjose
+    - url: https://129-159-34-149.580e08780c3d46e891d81016270021f8.plex.direct:32400/                                                                                                                              
+      token: Xsazqb26sqqTXfP5dGav                                                                                                                                                                                  
+#2nd mine
+    - url : https://152-69-190-142.31c81582669a49f09987ab885f7bfc10.plex.direct:8443/                                                                                                                              
+      token : 7Sh1Jy6ntYw5m37yk86o                                                                                                                                                                                 
+#ironraf
+    -url : https://140-238-166-138.0c7762420ec741d9b206fc7c21a17283.plex.direct:32400/
+     token : zzhHHN5iFro6TE1J5UjJ
+#termy
+    -url :https://168-138-9-87.dfbb74964a114dc48cdd4638bc057a46.plex.direct:32400/
+    token : DWzy_LUNAiDjxd6N5yQs
+#jama
+    -url : https://129-146-108-119.3b464bc6e7b44d1ea87fd8335ba4ceca.plex.direct:32400/
+    token : swAzNmq11jcuQrxixswN
+#blinky 
+  -url : https://132-145-22-42.975fac7a7cbf4795b4c7e3ebdd8a274b.plex.direct:32400/
+   token : nNRZ_Gh_RViFm-r1d3Qx
